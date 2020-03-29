@@ -1,0 +1,25 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "emoji-button": "^2.2.2",
+    "express": "^4.17.1",
+    "express-ejs-extend": "0.0.1",
+    "express-skeleton": "^0.8.0",
+    "mongodb": "^3.5.5",
+    "nodemon": "^2.0.2",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run serve",
+    "dev": "nodemon run serve"
+  },
+  "author": "",
+  "license": "ISC"
+}

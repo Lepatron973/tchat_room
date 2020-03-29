@@ -1,0 +1,38 @@
+<% extend('../base') %>
+
+<div class="container pt-5">
+        <div class="neons">
+            <h1 class="text-center text-secondary"><u>ChatRoom</u></h1>
+        </div>
+        <div class="container">
+            <div class="row d-flex flex-row">
+                <div class="col-12 border border-dark container_tchat">
+                    <ul id="tchatSpace" class="list-group pt-2">
+                        
+                    </ul>
+                </div>
+                <div class="col  m-2">
+                    <span class="d-flex">
+                        <input type="text" class="form-control mr-1" name="message" id="inputMessage" placeholder="message">
+                        <button id="emoji-button" class="bg-light">😀</button>
+                        <button type="submit" class="btn btn-primary" id="newMessage">send</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js"></script>
+   <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('#emoji-button');
+        const picker = new EmojiButton();
+      
+        picker.on('emoji', emoji => {
+          document.querySelector('input').value += emoji;
+        });
+      
+        button.addEventListener('click', () => {
+          picker.pickerVisible ? picker.hidePicker() : picker.showPicker(button);
+        });
+      });
+   </script>
